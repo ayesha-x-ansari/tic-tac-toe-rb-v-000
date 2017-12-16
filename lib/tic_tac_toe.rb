@@ -115,24 +115,11 @@ def play(board)
   counter = turn_count(board)
   until over?(board)  || counter >  10
     turn(board)
-      # 416 4408500 43386 david
     over?(board)
-    #  if won?(board)
-    #     winner_char = winner(board)
-    #      puts  "Congratulations #{winner_char}!"
-    #      string_out = "we have winner"
-    #  else
-    #
-    #  end
-    #end
     counter = turn_count(board)
   end
-  #if string_out = "we have winner"
-  #    puts  "Congratulations #{winner_char}!"
-  #    puts "#{string_out}"
-  #else
-  #    puts  "Cat's Game!"
-  #end
+
+  # Check if game is draw or won, returns X if X won else return O if O won
   if won?(board)
     winner_char = winner(board)
     puts  "Congratulations #{winner_char}!"
